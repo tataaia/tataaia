@@ -1,0 +1,7 @@
+# Ignore screenshots and system files
+Screenshot*.png
+Screenshot (*).png
+ChatGPT Image*.png
+Thumbs.db
+.DS_Store
+.gemini/

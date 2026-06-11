@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjali Devi - Senior Life Insurance Consultant | TATA AIA Life</title>
+    <meta name="description" content="Secure your family's future with personalized life insurance planning. Trusted solutions by Anjali Devi, Senior Life Insurance Consultant at TATA AIA.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Holographic 3D Wave background Canvas -->
+    <canvas id="hologramBgCanvas"></canvas>
+
+    <!-- Premium Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="logo-wrapper">
+                <img src="Our-Identity.png" alt="TATA AIA Logo" class="preload-logo">
+                <div class="glow-ring"></div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-text" id="progressText">0%</div>
+            <div class="loading-subtitle">Initializing Hologram Architecture...</div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="glass-header">
+        <div class="header-container">
+            <a href="#" class="logo-section">
+                <img src="Our-Identity.png" alt="TATA AIA Logo" class="nav-logo">
+                <div class="logo-divider"></div>
+                <div class="agent-brand">
+                    <span class="agent-name">Anjali Devi</span>
+                    <span class="agent-title">Senior Consultant | TATA AIA</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#story-section" class="nav-link">Our Vision</a>
+                <a href="#hlv-calculator" class="nav-link">HLV Calculator</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#contact" class="nav-link highlight-btn">Book Consultation</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Split Screen Hero Section -->
+        <section id="hero" class="hero-split-section">
+            <!-- Left Side: Visual -->
+            <div class="hero-split-visual">
+                <img src="hero_family_security.png" alt="TATA AIA Protection Illustration" class="hero-split-img">
+                <div class="hero-visual-overlay"></div>
+            </div>
+
+            <!-- Right Side: Content (Dark Theme) -->
+            <div class="hero-split-content">
+                <div class="hero-content-inner">
+                    <div class="hero-welcome">Welcome</div>
+                    
+                    <h1 class="hero-title">Securing Dreams.<br><span class="gradient-text">Safeguarding Futures.</span></h1>
+                    
+                    <!-- 3x3 Decorative Dot Grid from screenshot concept -->
+                    <div class="dot-grid-decor">
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+
+                    <p class="hero-desc">Hi, I am <strong>Anjali Devi</strong>. Partner with me to design resilient wealth & protection portfolios backed by TATA AIA's industry-leading claims commitment.</p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn btn-primary">Get in Touch <i class="fas fa-chevron-right"></i></a>
+                        <a href="#hlv-calculator" class="btn btn-secondary-dark">Calculate HLV <i class="fas fa-calculator"></i></a>
+                    </div>
+
+                    <!-- Scroll indication / status directly accessible -->
+                    <div class="hero-split-footer">
+                        <div class="hero-badge-small">
+                            <span class="pulse-dot"></span> Certified Expert
+                        </div>
+                        <a href="#story-section" class="scroll-down-btn">
+                            <span>Scroll Down</span> <i class="fas fa-arrow-down-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Identity / Vision Section (Floating Glass) -->
+        <section id="story-section" class="story-section transparent-glass-section">
+            <div class="story-container">
+                <div class="story-grid">
+                    <div class="story-text glass-hologram-card">
+                        <h2 class="section-title">The Foundation of Trust</h2>
+                        <p class="story-p lead">At TATA AIA, we believe insurance is not just a policy; it's a promise of dignity, continuity, and love for your family.</p>
+                        <p class="story-p">As your personal advisor, I sit down with you to map out your life stages, liabilities, and dreams. We translate them into customized security plans so you can live life confidently.</p>
+                        <div class="vision-cards">
+                            <div class="vision-card glass">
+                                <i class="fas fa-shield-halved"></i>
+                                <h3>Complete Security</h3>
+                                <p>Guaranteed protection up to age 100 with rider coverages.</p>
+                            </div>
+                            <div class="vision-card glass">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Wealth Accumulation</h3>
+                                <p>Combine market performance with safety options.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-visual">
+                        <div class="image-wrapper-glow">
+                            <img src="businessman-putting-wooden-cube-block-stacking-with-insurance-and-assurance-icon-including-family-health-real-estate-car-and-financial-for-risk-management-concept-photo.jpg" alt="Insurance Planning Concept" class="featured-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Spiral/Helix Cards Section -->
+        <section id="interactive-ladder" class="interactive-ladder-section">
+            <div class="ladder-header text-center">
+                <span class="badge">3D Protection Helix</span>
+                <h2 class="section-title">Explore Your Protection Ladder</h2>
+                <p class="section-subtitle">Scroll to rotate the interactive 3D helix. Click any card to unlock complete policy guides, tax benefits, and calculations.</p>
+            </div>
+            
+            <div class="ladder-3d-viewport">
+                <div class="ladder-scroll-track" id="ladderScrollTrack">
+                    
+                    <!-- Card 1 -->
+                    <div class="ladder-card" data-index="0" style="--bg-url: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Term Insurance</span>
+                            <h3>Maha Raksha Supreme</h3>
+                            <p>Premium term coverage up to age 100 with rider flexibilities.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="ladder-card" data-index="1" style="--bg-url: url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Savings & Investment</span>
+                            <h3>Fortune Guarantee Plus</h3>
+                            <p>100% Guaranteed regular income with up to 90% Policy Loan option.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="ladder-card" data-index="2" style="--bg-url: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Retirement & Annuity</span>
+                            <h3>Saral Pension Plan</h3>
+                            <p>Guaranteed lifetime regular income starting immediately or deferred.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="ladder-card" data-index="3" style="--bg-url: url('https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Accident Protection</span>
+                            <h3>Insta Shield Rider</h3>
+                            <p>High-value coverage for accidental events and permanent disabilities.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="ladder-card" data-index="4" style="--bg-url: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Health Cover</span>
+                            <h3>Critikhare Health Shield</h3>
+                            <p>Lump sum payout upon detection of critical illnesses to protect savings.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="ladder-card" data-index="5" style="--bg-url: url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Child Future</span>
+                            <h3>Smart Kid Planner</h3>
+                            <p>Secure child's higher education milestones and future dreams.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="ladder-card" data-index="6" style="--bg-url: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Market-Linked Wealth</span>
+                            <h3>Wealth Pro ULIP</h3>
+                            <p>Capital growth potential linked with premium protection benefits.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="ladder-card" data-index="7" style="--bg-url: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Whole Life Shield</span>
+                            <h3>Sampoorna Raksha</h3>
+                            <p>Lifetime coverage protecting generational inheritance plans.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="ladder-card" data-index="8" style="--bg-url: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Corporate Protection</span>
+                            <h3>Group Employee Cover</h3>
+                            <p>High-value customizable coverage for companies and team members.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div class="ladder-card" data-index="9" style="--bg-url: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-glass-glow"></div>
+                        <div class="card-img-holder"></div>
+                        <div class="card-content-box">
+                            <span class="card-tag">Business Continuity</span>
+                            <h3>Keyman Insurance Shield</h3>
+                            <p>Safeguard business operations from risk of losing critical leaders.</p>
+                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo Reveal & Expansion Section -->
+        <section class="logo-reveal-section">
+            <div class="logo-reveal-container">
+                <div class="logo-reveal-box">
+                    <img src="Our-Identity.png" alt="TATA AIA Logo" class="reveal-logo" id="revealLogo">
+                </div>
+                <div class="reveal-content" id="revealContent">
+                    <h2 class="reveal-title">Backed by the Trust of TATA</h2>
+                    <p class="reveal-desc">Leadership, integrity, and trust. Combined with AIA's Asia-Pacific insurance expertise, we bring you absolute peace of mind.</p>
+                    <div class="trust-grid">
+                        <div class="trust-metric">
+                            <i class="fas fa-award"></i>
+                            <h4>World Class service</h4>
+                            <p>Seamless online claims, dedicated claims managers, and instant support.</p>
+                        </div>
+                        <div class="trust-metric">
+                            <i class="fas fa-handshake"></i>
+                            <h4>150+ Years Legacy</h4>
+                            <p>TATA group brings trust that has stood the test of generations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Calculator Section (Floating Glass) -->
+        <section id="hlv-calculator" class="calculator-section transparent-glass-section">
+            <div class="calculator-container">
+                <div class="calc-header text-center">
+                    <span class="badge">Financial Intelligence</span>
+                    <h2 class="section-title">Human Life Value (HLV) Calculator</h2>
+                    <p class="section-subtitle">Determine the exact coverage amount required to secure your family's future financially in your absence.</p>
+                </div>
+
+                <div class="calc-grid">
+                    <div class="calc-inputs glass-hologram-card">
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="calc-income">Annual Income (₹)</label>
+                                <span class="calc-val" id="income-val">₹ 10,00,000</span>
+                            </div>
+                            <input type="range" id="calc-income" min="300000" max="5000000" step="50000" value="1000000" class="premium-slider">
+                        </div>
+
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="calc-age">Current Age</label>
+                                <span class="calc-val" id="age-val">30 Years</span>
+                            </div>
+                            <input type="range" id="calc-age" min="18" max="65" step="1" value="30" class="premium-slider">
+                        </div>
+
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="calc-retire">Planned Retirement Age</label>
+                                <span class="calc-val" id="retire-val">60 Years</span>
+                            </div>
+                            <input type="range" id="calc-retire" min="45" max="75" step="1" value="60" class="premium-slider">
+                        </div>
+
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="calc-liabilities">Total Liabilities / Loans (₹)</label>
+                                <span class="calc-val" id="liabilities-val">₹ 5,00,000</span>
+                            </div>
+                            <input type="range" id="calc-liabilities" min="0" max="20000000" step="100000" value="500000" class="premium-slider">
+                        </div>
+                    </div>
+
+                    <div class="calc-result">
+                        <div class="result-card">
+                            <h3>Recommended Life Cover</h3>
+                            <div class="hlv-amount" id="hlv-result">₹ 1,55,00,000</div>
+                            <p class="hlv-desc">This is the critical coverage required to cover future income losses and settle all active loans.</p>
+                            
+                            <div class="hlv-breakdown">
+                                <div class="breakdown-item">
+                                    <span>Income Replacement Cover</span>
+                                    <span id="breakdown-income">₹ 1,50,00,000</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Debt Protection Cover</span>
+                                    <span id="breakdown-debt">₹ 5,00,000</span>
+                                </div>
+                            </div>
+                            
+                            <a href="#contact" class="btn btn-primary btn-block text-center mt-4 consult-btn">Get Detailed Policy Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Protection Solutions Carousel (Floating Glass) -->
+        <section id="solutions" class="solutions-section transparent-glass-section">
+            <div class="solutions-container">
+                <div class="section-header text-center">
+                    <span class="badge">Our Portfolios</span>
+                    <h2 class="section-title">Tailored Protection Plans</h2>
+                    <p class="section-subtitle">Choose from a variety of insurance programs tailored to fit your life milestones.</p>
+                </div>
+
+                <div class="solutions-grid">
+                    <!-- Solution Card 1 -->
+                    <div class="solution-card glass">
+                        <div class="card-icon-glow green">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <h3>Maha Raksha Supreme</h3>
+                        <p class="plan-type">Term Insurance Plan</p>
+                        <p class="plan-desc">Pure life cover with custom options like return of premium, accidental death riders, and terminal illness benefits.</p>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> High cover up to age 100</li>
+                            <li><i class="fas fa-check"></i> Waiver of Premium on illness</li>
+                            <li><i class="fas fa-check"></i> Sec 80C & 10(10D) Tax Benefits</li>
+                        </ul>
+                        <a href="#contact" class="plan-link">Enquire Plan <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Solution Card 2 -->
+                    <div class="solution-card featured">
+                        <div class="featured-badge">Most Recommended</div>
+                        <div class="card-icon-glow gold">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3>Fortune Guarantee Plus</h3>
+                        <p class="plan-type">Savings & Investment Plan</p>
+                        <p class="plan-desc">100% guaranteed tax-free returns. Provides high liquidity with a **Policy Loan facility up to 90%** of surrender value.</p>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> 100% Guaranteed Regular Income</li>
+                            <li><i class="fas fa-check"></i> Emergency Policy Loan Option</li>
+                            <li><i class="fas fa-check"></i> In-built Life Cover shield</li>
+                        </ul>
+                        <a href="#contact" class="plan-link">Enquire Plan <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Solution Card 3 -->
+                    <div class="solution-card glass">
+                        <div class="card-icon-glow blue">
+                            <i class="fas fa-umbrella"></i>
+                        </div>
+                        <h3>Saral Pension</h3>
+                        <p class="plan-type">Retirement Annuity Plan</p>
+                        <p class="plan-desc">Secure life-long regular income. Offers Immediate Annuity (instant payout) or Deferred Annuity options.</p>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Guaranteed regular pension</li>
+                            <li><i class="fas fa-check"></i> Joint Life Annuity for spouse</li>
+                            <li><i class="fas fa-check"></i> Complete Return of Purchase Price</li>
+                        </ul>
+                        <a href="#contact" class="plan-link">Enquire Plan <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment / Contact Form Section (Floating Glass) -->
+        <section id="contact" class="contact-section transparent-glass-section">
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-info glass-hologram-card">
+                        <span class="badge">Get in Touch</span>
+                        <h2 class="section-title">Schedule a Personal Session</h2>
+                        <p class="contact-p">Let's design a secure blueprint for your family. Send an inquiry or reserve a custom slot directly with me. No obligations, absolute confidentiality.</p>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <i class="fas fa-user-tie"></i>
+                                <div>
+                                    <h4>Consultant Name</h4>
+                                    <p>Anjali Devi</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-address-card"></i>
+                                <div>
+                                    <h4>TATA AIA License ID</h4>
+                                    <p>AGNT9928174</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Direct Email</h4>
+                                    <p>anjali.devi@tataaia-advisor.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card glass-hologram-card">
+                        <form id="appointmentForm" class="appointment-form">
+                            <h3>Request Free Consultation</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Your Full Name</label>
+                                    <input type="text" id="form-name" required placeholder="e.g. Rahul Sharma">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-phone">Phone Number</label>
+                                    <input type="tel" id="form-phone" required placeholder="e.g. +91 98765 43210">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-interest">Preferred Insurance Category</label>
+                                <select id="form-interest">
+                                    <option value="term">Term Life Cover (Maha Raksha Supreme)</option>
+                                    <option value="savings">Savings & Policy Loan Options</option>
+                                    <option value="retirement">Retirement Annuity Plans</option>
+                                    <option value="child">Child Protection Plan</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-date">Preferred Date</label>
+                                    <input type="date" id="form-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-time">Preferred Time Slot</label>
+                                    <select id="form-time">
+                                        <option value="morning">Morning (10:00 AM - 1:00 PM)</option>
+                                        <option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+                                        <option value="evening">Evening (4:00 PM - 7:00 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block text-center mt-3" id="formSubmitBtn">
+                                Schedule Callback <i class="fas fa-paper-plane"></i>
+                            </button>
+
+                            <div class="form-success-message" id="formSuccessMessage">
+                                <i class="fas fa-circle-check"></i>
+                                <h4>Request Submitted Successfully!</h4>
+                                <p>Thank you. Anjali Devi will call you back on your preferred slot.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-col brand-col">
+                        <img src="Our-Identity.png" alt="TATA AIA Logo" class="footer-logo">
+                        <p class="footer-brand-desc">Providing trusted financial security and protection advisory under the license of TATA AIA Life Insurance Company Ltd.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Calculators</h4>
+                        <ul class="footer-links">
+                            <li><a href="#hlv-calculator">Human Life Value</a></li>
+                            <li><a href="#hlv-calculator">Premium Planner</a></li>
+                            <li><a href="#hlv-calculator">Tax Benefits Calculator</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Key Solutions</h4>
+                        <ul class="footer-links">
+                            <li><a href="#solutions">Maha Raksha Supreme</a></li>
+                            <li><a href="#solutions">Fortune Guarantee Plus</a></li>
+                            <li><a href="#solutions">Saral Pension</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact Info</h4>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-phone-alt"></i> +91 90000 00000</li>
+                            <li><i class="fas fa-envelope"></i> anjali.devi@tataaia-advisor.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> TATA AIA Branch, New Delhi, India</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-container bottom-row">
+                <p class="copyright">&copy; 2026 Anjali Devi. All rights reserved.</p>
+                <div class="disclaimer-text">
+                    Disclaimer: Anjali Devi is an authorized Life Insurance Agent of TATA AIA Life Insurance Company Limited (IRDAI Regn. No. 110). Insurance is the subject matter of the solicitation.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Policy Detail Modal Window -->
+    <div id="policy-detail-modal" class="policy-modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-container">
+            <div class="modal-window glass-hologram-card">
+                <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body-content" id="modalBodyContent">
+                    <!-- Dynamic details populated by app.js -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
