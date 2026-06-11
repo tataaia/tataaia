@@ -1734,6 +1734,7 @@ body.is-desktop .narrative-card.active {
     display: flex;
     justify-content: center;
     align-items: center;
+    will-change: transform;
 }
 
 .ladder-card {
@@ -1763,6 +1764,7 @@ body.is-desktop .narrative-card.active {
     /* prevent text selecting during scroll */
     user-select: none;
     -webkit-user-drag: none;
+    will-change: transform, opacity;
 }
 
 .ladder-card:hover {
@@ -2067,7 +2069,7 @@ body.is-desktop .narrative-card.active {
 /* Mobile responsive fixes for 3D ladder & modal */
 @media (max-width: 768px) {
     .interactive-ladder-section {
-        height: 180vh; /* Drastically reduced to prevent huge vertical gaps on mobile */
+        height: 240vh; /* Set to 240vh to perfectly balance vertical spacing and eliminate gaps on mobile */
         padding-top: 3rem;
     }
     .ladder-card {
