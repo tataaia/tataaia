@@ -1738,6 +1738,10 @@ body.is-desktop .narrative-card.active {
 
 .ladder-card {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -122.5px;
     width: 245px;
     height: 350px;
     background: rgba(255, 255, 255, 0.75);

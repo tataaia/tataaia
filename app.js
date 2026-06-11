@@ -311,8 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function getLadderScrollProgress() {
         if (!ladderSection) return 0;
-        const rect = ladderSection.getBoundingClientRect();
-        const scrollStart = window.scrollY + rect.top;
+        const scrollStart = ladderSection.offsetTop;
         const scrollRange = ladderSection.scrollHeight - window.innerHeight;
         const relativeScroll = window.scrollY - scrollStart;
         return Math.max(0, Math.min(1, relativeScroll / scrollRange));
@@ -385,8 +384,8 @@ document.addEventListener('DOMContentLoaded', () => {
         easedY += (targetY - easedY) * lerpFactor;
 
         if (track) {
-            // translateZ pushes the track slightly back to create depth, rotateX gives an interactive perspective tilt
-            track.style.transform = `translateZ(-150px) rotateX(-6deg) rotateY(${easedRotation}deg) translateY(${easedY}px)`;
+            // translateZ pushes the track slightly back to create depth, rotateX gives an interactive perspective tilt (-14deg)
+            track.style.transform = `translateZ(-150px) rotateX(-14deg) rotateY(${easedRotation}deg) translateY(${easedY}px)`;
         }
 
         // Adjust visibility card properties (opacity, blur) based on depth
