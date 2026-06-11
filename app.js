@@ -297,8 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.ladder-card');
     const totalCards = cards.length;
     const isMobileVal = isMobileDevice();
-    const radius = isMobileVal ? 110 : 390; // Reduced mobile radius to prevent cards clipping offscreen
-    const ySpacing = isMobileVal ? 70 : 135; // Reduced mobile vertical spacing to align steps elegantly
+    const radius = isMobileVal ? 120 : 390; // Optimized radius for mobile overlapping helix
+    const ySpacing = isMobileVal ? 55 : 135; // Tighter vertical spacing to allow cards to overlap beautifully
 
     // Arrange cards in a helical staircase at start
     cards.forEach((card, i) => {
