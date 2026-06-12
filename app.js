@@ -297,10 +297,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.ladder-card');
     const totalCards = cards.length;
     const isMobileVal = isMobileDevice();
-    const radius = isMobileVal ? 160 : 390; // Increased mobile radius to push cards outward
-    const ySpacing = isMobileVal ? 120 : 135; // Increased mobile vertical spacing to fully eliminate card overlap
+    const radius = isMobileVal ? 180 : 450; // Wider radius to pull cards outward and cover the full screen
+    const ySpacing = isMobileVal ? 220 : 280; // Large vertical spacing to completely eliminate any card overlaps
 
-    // Arrange cards in a helical staircase at start
+    // Arrange cards in a tight helical staircase at start
     cards.forEach((card, i) => {
         const angle = i * (360 / totalCards);
         const yOffset = i * ySpacing;
@@ -317,15 +317,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.max(0, Math.min(1, relativeScroll / scrollRange));
     }
 
-    let targetRotation = 0;
-    let easedRotation = 0;
-    let targetY = 0;
-    let easedY = 0;
-    const lerpFactor = 0.09; // Snappier LERP factor (0.09) for a stronger and faster scroll tracking response
+    // GSAP Scroll Engine (Buttery smooth, GPU accelerated, zero jitter)
+    const trackState = { rotationY: 0, y: 0 };
+    let lastActiveIndex = -1;
 
     // Audio & Haptic System
     let audioCtx = null;
-    let lastActiveIndex = -1;
 
     function initAudioContext() {
         if (!audioCtx) {
@@ -373,20 +370,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function animateLadder() {
+    function updateLadder() {
         const progress = getLadderScrollProgress();
         
         // Helix rotations and translations aligned to center the active card perfectly facing forward
-        targetRotation = -progress * (totalCards - 1) * (360 / totalCards);
-        targetY = -progress * (totalCards - 1) * ySpacing;
+        const targetRotation = -progress * (totalCards - 1) * (360 / totalCards);
+        const targetY = -progress * (totalCards - 1) * ySpacing;
 
-        easedRotation += (targetRotation - easedRotation) * lerpFactor;
-        easedY += (targetY - easedY) * lerpFactor;
-
-        if (track) {
-            // translateZ pushes the track slightly back to create depth, rotateX gives an interactive perspective tilt (-14deg)
-            track.style.transform = `translateZ(-150px) rotateX(-14deg) rotateY(${easedRotation}deg) translateY(${easedY}px)`;
-        }
+        // Animate with GSAP for buttery smooth easing
+        gsap.to(trackState, {
+            rotationY: targetRotation,
+            y: targetY,
+            duration: 0.6,
+            ease: "power2.out",
+            overwrite: "auto",
+            onUpdate: () => {
+                if (track) {
+                    // Set rotateX to 0deg to keep active card perfectly straight, not tilted/tedha
+                    track.style.transform = `translateZ(-150px) rotateX(0deg) rotateY(${trackState.rotationY}deg) translateY(${trackState.y}px)`;
+                }
+            }
+        });
 
         // Adjust visibility card properties (opacity, blur) based on depth
         const activeIndex = Math.round(progress * (totalCards - 1));
@@ -411,13 +415,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.classList.remove('active');
             }
         });
+    }
 
-        requestAnimationFrame(animateLadder);
-    }
+    // Scroll listener driven by update function
+    window.addEventListener('scroll', updateLadder);
     
-    if (ladderSection) {
-        animateLadder();
-    }
+    // Trigger initial positioning
+    setTimeout(updateLadder, 100);
 
     // ----------------------------------------------------------------------
     // 10. POLICY DETAIL DATASET & MODAL HANDLER

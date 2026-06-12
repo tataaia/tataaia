@@ -1700,7 +1700,7 @@ body.is-desktop .narrative-card.active {
    ========================================================================== */
 .interactive-ladder-section {
     position: relative;
-    height: 400vh; /* Plenty of scrolling space */
+    height: 600vh; /* Expanded scrolling space for 10 distinct, non-overlapping cards */
     background: transparent !important;
     padding-top: 6rem;
 }
@@ -2069,7 +2069,7 @@ body.is-desktop .narrative-card.active {
 /* Mobile responsive fixes for 3D ladder & modal */
 @media (max-width: 768px) {
     .interactive-ladder-section {
-        height: 240vh; /* Set to 240vh to perfectly balance vertical spacing and eliminate gaps on mobile */
+        height: 450vh; /* Expanded mobile scrolling space to separate cards completely */
         padding-top: 3rem;
     }
     .ladder-card {
