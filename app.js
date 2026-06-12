@@ -165,11 +165,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }).format(amount).replace('INR', '₹');
     }
 
+    function updateSliderBackground(slider) {
+        const min = parseFloat(slider.min) || 0;
+        const max = parseFloat(slider.max) || 100;
+        const val = parseFloat(slider.value) || 0;
+        const percentage = ((val - min) / (max - min)) * 100;
+        slider.style.background = `linear-gradient(to right, var(--primary-aia) 0%, var(--primary-aia) ${percentage}%, rgba(0, 75, 135, 0.1) ${percentage}%, rgba(0, 75, 135, 0.1) 100%)`;
+    }
+
     function calculateHLV() {
         const annualIncome = parseInt(inputIncome.value, 10);
         const age = parseInt(inputAge.value, 10);
         const retirement = parseInt(inputRetire.value, 10);
         const liabilities = parseInt(inputLiabilities.value, 10);
+
+        // Update dynamic track fills
+        updateSliderBackground(inputIncome);
+        updateSliderBackground(inputAge);
+        updateSliderBackground(inputRetire);
+        updateSliderBackground(inputLiabilities);
 
         // Update value displays
         valIncome.textContent = formatCurrency(annualIncome);
@@ -181,17 +195,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (retirement <= age) {
             inputRetire.value = age + 1;
             valRetire.textContent = `${age + 1} Years`;
+            updateSliderBackground(inputRetire);
         }
 
         const workingYearsRemaining = Math.max(1, retirement - age);
         
-        // Standard Human Life Value formula: 
-        // HLV = (Annual Income * Working Years Remaining) + Liabilities
-        // To make it more realistic, we adjust the income factor (usually cover is 15-20x annual income up to retirement)
-        const incomeCover = annualIncome * Math.min(20, workingYearsRemaining);
+        // --- REAL ACTUARIAL HLV CALCULATION (Income Replacement Method) ---
+        // Breadwinner personal expenses (standard 30%) are deducted; 70% goes to family security.
+        const familySupportIncome = annualIncome * 0.70; 
+        const incomeCover = familySupportIncome * workingYearsRemaining;
         const totalHLV = incomeCover + liabilities;
 
-        // Render result with counts animation/formatting
+        // Render results
         resultHlv.textContent = formatCurrency(totalHLV);
         breakdownIncome.textContent = formatCurrency(incomeCover);
         breakdownDebt.textContent = formatCurrency(liabilities);
