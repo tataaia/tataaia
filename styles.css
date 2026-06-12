@@ -116,38 +116,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-hologram-card {
-    background: rgba(255, 255, 255, 0.75) !important;
+    background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(16px) saturate(120%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
-    border: 1px solid rgba(0, 75, 135, 0.08) !important;
+    border: 1px solid rgba(0, 75, 135, 0.15) !important;
     box-shadow: 
         0 20px 40px rgba(0, 75, 135, 0.05), 
-        inset 0 0 24px rgba(255, 255, 255, 0.6) !important;
+        inset 0 0 24px rgba(255, 255, 255, 0.1) !important;
     border-radius: var(--border-radius-lg);
     transition: var(--transition-smooth);
     color: var(--text-dark) !important;
 }
 
 .glass-hologram-card:hover {
-    border-color: rgba(0, 75, 135, 0.18) !important;
+    border-color: rgba(0, 75, 135, 0.3) !important;
     box-shadow: 
-        0 25px 45px rgba(0, 75, 135, 0.08), 
-        inset 0 0 30px rgba(255, 255, 255, 0.8) !important;
+        0 25px 45px rgba(0, 75, 135, 0.1), 
+        inset 0 0 30px rgba(255, 255, 255, 0.2) !important;
 }
 
 .vision-card.glass, .solution-card.glass {
-    background: rgba(255, 255, 255, 0.7) !important;
+    background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(0, 75, 135, 0.06) !important;
+    border: 1px solid rgba(0, 75, 135, 0.15) !important;
     box-shadow: 0 15px 35px rgba(0, 75, 135, 0.04) !important;
     color: var(--text-dark) !important;
 }
 
 .vision-card.glass:hover, .solution-card.glass:hover {
     border-color: var(--primary-aia) !important;
-    background: rgba(255, 255, 255, 0.85) !important;
-    box-shadow: 0 15px 35px rgba(211, 17, 69, 0.06) !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 15px 35px rgba(211, 17, 69, 0.1) !important;
 }
 
 .vision-card.glass h3, .solution-card.glass h3 {
@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     width: 100%;
     min-height: 100vh;
-    background-color: var(--dark-slate);
+    background-color: transparent;
     overflow: hidden;
     position: relative;
 }
@@ -435,15 +435,15 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     background: 
-        linear-gradient(180deg, rgba(10, 15, 29, 0.7) 0%, rgba(10, 15, 29, 0) 30%),
-        linear-gradient(90deg, rgba(10, 15, 29, 0) 65%, rgba(10, 15, 29, 0.95) 100%);
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 30%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.2) 100%);
     pointer-events: none;
 }
 
 .hero-split-content {
     width: 50%;
     min-height: 100vh;
-    background: #0A0F1D;
+    background: transparent;
     display: flex;
     align-items: center;
     padding: calc(var(--header-height) + 6rem) 5rem 4rem; /* safe top padding */
@@ -481,8 +481,9 @@ h1, h2, h3, h4, h5, h6 {
 .hero-split-section .hero-title {
     font-size: 3.2rem;
     line-height: 1.2;
-    color: white;
+    color: var(--text-dark);
     margin-bottom: 1.5rem;
+    font-weight: 800;
 }
 
 /* 3x3 Decorative Dot Grid */
@@ -496,7 +497,7 @@ h1, h2, h3, h4, h5, h6 {
 .dot-grid-decor .dot {
     width: 8px;
     height: 8px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(15, 23, 42, 0.15);
     border-radius: 50%;
     transition: var(--transition-smooth);
 }
@@ -508,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-split-section .hero-desc {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-dark);
     line-height: 1.7;
     margin-bottom: 2.5rem;
 }
@@ -875,7 +876,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .logo-reveal-section {
     padding: 10rem 0;
-    background: var(--grad-dark);
+    background: transparent;
     color: var(--text-dark);
     overflow: hidden;
 }
@@ -1059,15 +1060,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .result-card {
-    background: var(--grad-primary);
-    color: white;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(0, 75, 135, 0.2) !important;
+    color: var(--text-dark) !important;
     padding: 50px 40px;
     border-radius: var(--border-radius-lg);
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 20px 40px rgba(0, 75, 135, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 75, 135, 0.05);
     position: relative;
     overflow: hidden;
 }
@@ -1079,15 +1081,15 @@ h1, h2, h3, h4, h5, h6 {
     right: -100px;
     width: 300px;
     height: 300px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 75, 135, 0.03);
     border-radius: 50%;
     pointer-events: none;
 }
 
 .result-card h3 {
     font-size: 1.35rem;
-    font-weight: 500;
-    opacity: 0.9;
+    font-weight: 700;
+    color: var(--text-dark);
     margin-bottom: 0.8rem;
 }
 
@@ -1097,15 +1099,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--primary-aia);
 }
 
 .hlv-desc {
     font-size: 0.95rem;
-    opacity: 0.8;
+    color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 2.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(0, 75, 135, 0.15);
     padding-bottom: 1.5rem;
 }
 
@@ -1113,6 +1115,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    color: var(--text-dark);
 }
 
 .breakdown-item {
@@ -1122,7 +1125,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .breakdown-item span:first-child {
-    opacity: 0.8;
+    color: var(--text-muted);
 }
 
 .breakdown-item span:last-child {
@@ -1130,10 +1133,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .consult-btn {
-    background: white !important;
-    color: var(--primary-tata) !important;
+    background: var(--grad-primary) !important;
+    color: white !important;
     font-weight: 700;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 6px 15px rgba(211, 17, 69, 0.15) !important;
 }
 
 .consult-btn:hover {
@@ -1163,30 +1166,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .solution-card {
-    background: var(--light-bg);
-    border: 1px solid rgba(0, 75, 135, 0.04);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 75, 135, 0.15);
     border-radius: var(--border-radius-lg);
     padding: 45px 35px;
     transition: var(--transition-smooth);
     display: flex;
     flex-direction: column;
     position: relative;
+    box-shadow: 0 15px 35px rgba(0, 75, 135, 0.04);
 }
 
 .solution-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 75, 135, 0.1);
+    box-shadow: 0 20px 45px rgba(0, 75, 135, 0.08);
+    border-color: var(--primary-aia);
 }
 
 .solution-card.featured {
-    background: linear-gradient(135deg, #0A0F1D 0%, #172554 100%) !important;
-    color: white !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.35) !important;
+    color: var(--text-dark) !important;
+    border: 1px solid var(--primary-aia) !important;
+    box-shadow: 0 0 20px rgba(211, 17, 69, 0.15) !important;
 }
 
 .solution-card.featured:hover {
-    box-shadow: 0 20px 45px rgba(211, 17, 69, 0.15);
+    box-shadow: 0 20px 45px rgba(211, 17, 69, 0.25) !important;
 }
 
 .featured-badge {
@@ -1233,7 +1238,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .solution-card.featured .plan-type {
-    color: var(--accent-gold);
+    color: var(--primary-aia);
 }
 
 .plan-desc {
@@ -1244,7 +1249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .solution-card.featured .plan-desc {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-muted);
 }
 
 .plan-features {
@@ -1267,7 +1272,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .solution-card.featured .plan-features li i {
-    color: var(--accent-gold);
+    color: var(--primary-aia);
 }
 
 .plan-link {
@@ -1282,7 +1287,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .solution-card.featured .plan-link {
-    color: white;
+    color: var(--primary-tata);
 }
 
 .plan-link:hover {
