@@ -12,13 +12,16 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- GSAP for Butter-Smooth 60fps Scroll Easing Engine -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </head>
 <body>
 
     <!-- Holographic 3D Wave background Canvas -->
     <canvas id="hologramBgCanvas"></canvas>
+    <!-- Background Video for hologram screen -->
+    <video id="hologramVideoBg" autoplay loop muted playsinline preload="auto">
+        <source src="background.mp4" type="video/mp4">
+    </video>
 
     <!-- Premium Preloader -->
     <div id="preloader">
@@ -138,140 +141,7 @@
             </div>
         </section>
 
-        <!-- 3D Spiral/Helix Cards Section -->
-        <section id="interactive-ladder" class="interactive-ladder-section">
-            <div class="ladder-header text-center">
-                <span class="badge">3D Protection Helix</span>
-                <h2 class="section-title">Explore Your Protection Ladder</h2>
-                <p class="section-subtitle">Scroll to rotate the interactive 3D helix. Click any card to unlock complete policy guides, tax benefits, and calculations.</p>
-            </div>
-            
-            <div class="ladder-3d-viewport">
-                <div class="ladder-scroll-track" id="ladderScrollTrack">
-                    
-                    <!-- Card 1 -->
-                    <div class="ladder-card" data-index="0" style="--bg-url: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Term Insurance</span>
-                            <h3>Maha Raksha Supreme</h3>
-                            <p>Premium term coverage up to age 100 with rider flexibilities.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
 
-                    <!-- Card 2 -->
-                    <div class="ladder-card" data-index="1" style="--bg-url: url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Savings & Investment</span>
-                            <h3>Fortune Guarantee Plus</h3>
-                            <p>100% Guaranteed regular income with up to 90% Policy Loan option.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="ladder-card" data-index="2" style="--bg-url: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Retirement & Annuity</span>
-                            <h3>Saral Pension Plan</h3>
-                            <p>Guaranteed lifetime regular income starting immediately or deferred.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="ladder-card" data-index="3" style="--bg-url: url('https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Accident Protection</span>
-                            <h3>Insta Shield Rider</h3>
-                            <p>High-value coverage for accidental events and permanent disabilities.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="ladder-card" data-index="4" style="--bg-url: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Health Cover</span>
-                            <h3>Critikhare Health Shield</h3>
-                            <p>Lump sum payout upon detection of critical illnesses to protect savings.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="ladder-card" data-index="5" style="--bg-url: url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Child Future</span>
-                            <h3>Smart Kid Planner</h3>
-                            <p>Secure child's higher education milestones and future dreams.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- Card 7 -->
-                    <div class="ladder-card" data-index="6" style="--bg-url: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Market-Linked Wealth</span>
-                            <h3>Wealth Pro ULIP</h3>
-                            <p>Capital growth potential linked with premium protection benefits.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- Card 8 -->
-                    <div class="ladder-card" data-index="7" style="--bg-url: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Whole Life Shield</span>
-                            <h3>Sampoorna Raksha</h3>
-                            <p>Lifetime coverage protecting generational inheritance plans.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- Card 9 -->
-                    <div class="ladder-card" data-index="8" style="--bg-url: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Corporate Protection</span>
-                            <h3>Group Employee Cover</h3>
-                            <p>High-value customizable coverage for companies and team members.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                    <!-- Card 10 -->
-                    <div class="ladder-card" data-index="9" style="--bg-url: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop');">
-                        <div class="card-glass-glow"></div>
-                        <div class="card-img-holder"></div>
-                        <div class="card-content-box">
-                            <span class="card-tag">Business Continuity</span>
-                            <h3>Keyman Insurance Shield</h3>
-                            <p>Safeguard business operations from risk of losing critical leaders.</p>
-                            <span class="explore-hint">Explore Details <i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
 
         <!-- Logo Reveal & Expansion Section -->
         <section class="logo-reveal-section">
@@ -572,20 +442,7 @@
         </div>
     </footer>
 
-    <!-- Policy Detail Modal Window -->
-    <div id="policy-detail-modal" class="policy-modal">
-        <div class="modal-overlay" id="modalOverlay"></div>
-        <div class="modal-container">
-            <div class="modal-window glass-hologram-card">
-                <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div class="modal-body-content" id="modalBodyContent">
-                    <!-- Dynamic details populated by app.js -->
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- App Logic -->
     <script src="app.js"></script>
